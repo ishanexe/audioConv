@@ -1,0 +1,67 @@
+.container {
+    max-width: 400px; /* Set a max-width for the container */
+    margin: auto;     /* Center the container */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+    margin-top: 150px;
+}
+
+.form {
+    display: flex;      
+    flex-direction: column; /* Stack elements vertically */
+}
+
+input[type="text"] {
+    width: 100%;        /* Full width for the input */
+    padding: 10px;      /* Padding for the input */
+    margin-bottom: 10px; /* Space between input and button */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; /* Font size for input */
+}
+
+/* Style for the placeholder text */
+input::placeholder {
+    font-size: 16px;    /* Change the size of the placeholder text */
+    color: #888;        /* Change the color of the placeholder text */
+}
+
+button {
+    width: 100%;        /* Same width as the input field */
+    padding: 10px;      /* Padding for the button */
+    border: none;       /* Remove default button border */
+    background-color: #4CAF50; /* Button background color */
+    color: white;       /* Button text color */
+    border-radius: 4px; /* Round button corners */
+    cursor: pointer;     /* Change cursor on hover */
+    font-size: 16px; /* Font size for button */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker background on hover */
+}
+
+/* Style for success and error messages */
+.success-message {
+    color: #4CAF50; /* Green color for success */
+    margin-top: 10px; /* Space above success message */
+}
+
+.error {
+    color: #FF0000; /* Red color for error */
+    margin-top: 10px; /* Space above error message */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    input[type="text"], button {
+        padding: 12px; /* Increase padding for better touch target */
+        font-size: 18px; /* Slightly larger font for better readability */
+    }
+}

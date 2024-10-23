@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>YouTube Audio Downloader</title>
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube Audio Downloader</h1>
+        <form method="POST" class="form">
+            <input type="text" name="youtube_url" placeholder="Enter YouTube URL" required>
+            <button type="submit">Download Audio</button>
+        </form>
+        {% if success %}
+            <p class="success-message">Download completed! Check the 'downloaded' directory.</p>
+        {% elif error %}
+            <p class="error">Error: {{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
